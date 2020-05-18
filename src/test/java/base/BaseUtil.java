@@ -23,7 +23,7 @@ public class BaseUtil {
     public Customer GetCustomerFromJson(String jsonFileName) throws IOException {
         String dir = System.getProperty("user.dir");
         ObjectMapper objectMapper = new ObjectMapper();
-        Customer customer = objectMapper.readValue(new File(dir + "/src/test/files/" + jsonFileName), Customer.class);
+        Customer customer = objectMapper.readValue(new File(dir + "/src/test/java/fixtures/" + jsonFileName), Customer.class);
         return customer;
     }
 }
