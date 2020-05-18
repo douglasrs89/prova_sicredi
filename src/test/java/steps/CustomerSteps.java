@@ -2,9 +2,9 @@ package steps;
 
 import base.BaseUtil;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.When;
 import models.Customer;
 import org.junit.Assert;
 import pageObjects.CustomerAddPage;
@@ -33,69 +33,9 @@ public class CustomerSteps extends BaseUtil {
         customerPage.SelectVersion(version, this.baseUtil.webDriver, 5);
     }
 
-    @Given("I click on Add Customer button")
+    @When("I click on Add Customer button")
     public void iClickOnAddCustomerButton() {
         customerPage.ClickAddCustomer(this.baseUtil.webDriver, 5);
-    }
-
-    @When("I enter ([^\"]*) on Name")
-    public void iEnterOnName(String name) {
-        customerAddPage.inputName.sendKeys(name);
-    }
-
-    @And("I enter ([^\"]*) on Last Name")
-    public void iEnterOnLastName(String lastName) {
-        customerAddPage.inputLastName.sendKeys(lastName);
-    }
-
-    @And("I enter ([^\"]*) on ContactFirstName")
-    public void iEnterOnContactFirstName(String contactFirstName) {
-        customerAddPage.inputContactFirstName.sendKeys(contactFirstName);
-    }
-
-    @And("I enter ([^\"]*) on Phone")
-    public void iEnterOnPhone(String phone) {
-        customerAddPage.inputPhone.sendKeys(phone);
-    }
-
-    @And("I enter ([^\"]*) on AddressLine1")
-    public void iEnterOnAddressLine1(String addressLine1) {
-        customerAddPage.inputAddressLine1.sendKeys(addressLine1);
-    }
-
-    @And("I enter ([^\"]*) on AddressLine2")
-    public void iEnterOnAddressLine2(String addressLine2) {
-        customerAddPage.inputAddressLine2.sendKeys(addressLine2);
-    }
-
-    @And("I enter ([^\"]*) on City")
-    public void iEnterOnCity(String city) {
-        customerAddPage.inputCity.sendKeys(city);
-    }
-
-    @And("I enter ([^\"]*) on State")
-    public void iEnterOnState(String state) {
-        customerAddPage.inputState.sendKeys(state);
-    }
-
-    @And("I enter ([^\"]*) on PostalCode")
-    public void iEnterOnPostalCode(String postalCode) {
-        customerAddPage.inputPostalCode.sendKeys(postalCode);
-    }
-
-    @And("I enter ([^\"]*) on Country")
-    public void iEnterOnCountry(String country) {
-        customerAddPage.inputCountry.sendKeys(country);
-    }
-
-    @And("I select ([^\"]*) on from Employeer$")
-    public void selectFromEmployeer(String fromEmployeer) {
-        customerAddPage.SelectFromEmployeer(fromEmployeer);
-    }
-
-    @And("I enter ([^\"]*) on CreditLimit")
-    public void iEnterOnCreditLimit(String creditLimit) {
-        customerAddPage.inputCreditLimit.sendKeys(creditLimit);
     }
 
     @And("I click on Save button")
@@ -147,7 +87,6 @@ public class CustomerSteps extends BaseUtil {
         baseUtil.WaitVisibilityOfText(message, customerPage.alertMessage, this.baseUtil.webDriver, 5);
         Assert.assertEquals(message, customerPage.alertMessage.getText());
     }
-
 
     @And("I fill the fields with the customer data")
     public void iFillTheFieldsWithTheCustomerData() throws IOException {
