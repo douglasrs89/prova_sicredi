@@ -1,0 +1,14 @@
+{
+  "name": "Teste Sicredi",
+  "lastName": "Teste",
+  "contactFirstName": "Douglas",
+  "phone": "51 9999-9999",
+  "addressLine1": "Av Assis Brasil, 3970",
+  "addressLine2": "Torre D",
+  "city": "Porto Alegre",
+  "state": "RS",
+  "postalCode": "91000-000",
+  "country": "Brasil",
+  "fromEmployer": "Fixter",
+  "creditLimit": "200"
+}
